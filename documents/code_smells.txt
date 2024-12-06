@@ -1,0 +1,30 @@
+Repeated Firebase Calls
+Smell: Firebase operations like .push() and .get() are repeated across multiple files.
+Refactoring: Consolidate Firebase operations into FirebaseService.
+Hardcoded Strings
+Smell: Strings like "time_logs" and error messages are hardcoded.
+Refactoring: Use constants or enums for all fixed strings.
+Lack of Error Handling
+Smell: Firebase operations do not handle errors gracefully.
+Refactoring: Add try-catch blocks to handle exceptions.
+Lack of Input Validation
+Smell: User inputs (e.g., DATE, FROM, TO) are not validated before submission.
+Refactoring: Add validation logic in forms.
+No Null Safety Checks
+Smell: Assumes all fields (from, to, etc.) in Firebase are non-null.
+Refactoring: Add null checks and default values.
+Overly Complex Query Logic
+Smell: Query logic combines too many responsibilities, making it hard to debug.
+Refactoring: Split logic into smaller helper functions.
+UI and Logic Coupling
+Smell: Business logic (e.g., addTimeLog) is directly embedded in UI files.
+Refactoring: Move logic to FirebaseService.
+Unoptimized Data Parsing
+Smell: Parsing Firebase data is done inline, leading to repetitive and error-prone code.
+Refactoring: Use helper methods or classes to handle data parsing.
+Static Methods in FirebaseService
+Smell: Firebase operations are static, which limits flexibility for testing.
+Refactoring: Convert FirebaseService to a class with instance methods and inject dependencies.
+No Logging for Debugging
+Smell: No logs for debugging data flow or errors.
+Refactoring: Add logging using debugPrint() or a logging package.

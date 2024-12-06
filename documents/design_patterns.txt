@@ -1,0 +1,10 @@
+Design Patterns
+
+1. Singleton Pattern
+   - Used in FirebaseService to ensure a single instance of database interactions.
+
+2. MVC Pattern
+   - Separate UI (Flutter screens) and logic (FirebaseService).
+
+3. Observer Pattern
+   - Used to update UI after querying logs.
